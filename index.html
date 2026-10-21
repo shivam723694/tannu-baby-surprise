@@ -172,6 +172,9 @@
   .welcome-card{border-color:#fff}
   .footer{line-height:1.9}
   @media(max-width:520px){.wrap{padding-top:12px}.quick-nav{border-radius:18px}.love-fab{right:10px;bottom:10px;padding:10px 12px}.photo-lightbox{padding:12px}}
+  .photo-teaser{margin-top:22px;padding:22px 18px;text-align:center;border:1px solid #d5edfb;border-radius:22px;background:linear-gradient(135deg,#f4fbff,#fff3f8)}
+  .photo-teaser .pill{margin-top:12px}
+  .photo-grid img{display:block;min-height:160px}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -223,6 +226,12 @@ And Baby… there's one little thing I want to say with a smile 😚💕 You nev
 Until then, I'm keeping our pasta-and-pizza memory safe in my heart. Maybe next time we can make an even sweeter memory together. 🩵
 
 <div class="signature">Your hug-waiting person ♡</div></div>
+    <div class="photo-teaser">
+      <div class="eyebrow">our moments together 📸</div>
+      <h2>Want to see our photos? 💗</h2>
+      <p class="muted">Tap below to open the memories you uploaded.</p>
+      <button class="pill" type="button" onclick="showRoute('photos')">Open our photo gallery ✨</button>
+    </div>
   </section>
 
     <section class="panel route-page photo-gallery" data-route-page="photos" id="photo-memories">
