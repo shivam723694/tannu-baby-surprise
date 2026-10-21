@@ -70,7 +70,7 @@ Your person 💗</div><div class="btnrow"><button class="btn primary" onclick="g
 <script>
 const sections=['welcome','surprise','question','gifts','flowers','letter','memories','final'];
 function go(id){sections.forEach(s=>document.getElementById(s).classList.toggle('hide',s!==id));window.scrollTo({top:0,behavior:'smooth'});if(id==='gifts')confetti(18)}
-function sendLove(){document.getElementById('candles').innerHTML='💗 ✨ 💗';document.getElementById('wish').textContent='A little love sent just for you, Tannu Baby 💙';document.getElementById('send-love').textContent='Love sent! 💫';document.getElementById('blow').disabled=true;confetti(35)}
+function sendLove(){document.getElementById('candles').innerHTML='💗 ✨ 💗';document.getElementById('wish').textContent='A little love sent just for you, Tannu Baby 💙';document.getElementById('send-love').textContent='Love sent! 💫';document.getElementById('send-love').disabled=true;confetti(35)}
 function moveNo(){const b=document.getElementById('noBtn');const area=b.parentElement;const maxX=Math.max(0,area.clientWidth-b.offsetWidth);b.style.transform='translate('+Math.round((Math.random()-.5)*Math.min(130,maxX+80))+'px,'+Math.round((Math.random()-.5)*45)+'px)';document.getElementById('noHint').textContent='Hehe, try again… or just say YES 😜'}
 function acceptGifts(){document.getElementById('bear').textContent='😻💙';document.getElementById('questionText').textContent='I knew you would! You deserve every little bit of happiness. 💗';confetti(32);setTimeout(()=>go('gifts'),650)}
 function openGift(which){if(which==='flowers'){go('flowers');return}if(which==='letter'){go('letter');return}go('memories')}
