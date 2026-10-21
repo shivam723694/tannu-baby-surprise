@@ -89,6 +89,20 @@
   .gift:focus-visible,.pill:focus-visible,.quick-nav a:focus-visible{outline:3px solid #e78eaf;outline-offset:3px}
   .letter{overflow-wrap:anywhere}
   .panel{scroll-margin-top:76px}
+  /* Each surprise opens as its own romantic route/page */
+  .route-page{display:none!important;min-height:58vh}
+  .route-page.route-active{display:block!important;animation:route-enter .65s cubic-bezier(.2,.8,.2,1) both}
+  .hero.route-page{display:none!important}
+  .hero.route-page.route-active{display:block!important}
+  .quick-nav a[aria-current="page"]{background:linear-gradient(135deg,#ffd9e8,#dff3ff);border-color:#e8a8c3;box-shadow:0 3px 0 #edbfd4}
+  .love-rain{position:fixed;z-index:20;left:var(--left);top:-50px;font-size:var(--size);pointer-events:none;animation:love-fall var(--duration) linear forwards;filter:drop-shadow(0 3px 5px #f2a8c755)}
+  @keyframes route-enter{from{opacity:0;transform:translateY(24px) scale(.985);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+  @keyframes love-fall{to{transform:translate3d(var(--drift),110vh,0) rotate(420deg);opacity:.1}}
+  .route-heading{text-align:center;margin-bottom:18px}
+  .route-heading .route-icon{font-size:3rem;display:block;animation:heartbeat 1.3s ease-in-out infinite}
+  .route-back{display:flex;justify-content:center;margin-top:18px}
+  .route-back .pill{margin-top:0}
+  @media(max-width:520px){.route-page{min-height:60vh}}
   @media(max-width:520px){
     .wrap{padding:8px 11px 28px}
     .topline{margin:8px 0 14px;letter-spacing:.1em}
@@ -113,21 +127,24 @@
 <div class="floaties" id="floaties" aria-hidden="true"></div>
 <main class="wrap">
   <div class="topline">a little surprise, made only for you 🩵</div>
-  <header class="hero">
+  <header class="hero route-page route-active" data-route-page="home" id="home">
     <div class="tiny-stars">✦ · ˚ ✧ · ˚ ✦</div>
     <span class="bear" aria-hidden="true">🧸</span>
     <h1>Hey, Tannu Baby!<span>my favourite person 💗</span></h1>
     <p>I made this tiny surprise just for you, Babu. Tap slowly, open the little gifts, and save the sweetest part for last. Every word comes from my heart. 🩵</p>
-    <button class="pill" onclick="document.getElementById('our-memory').scrollIntoView({behavior:'smooth'})">Start our little story 💌</button>
+    <button class="pill" onclick="showRoute('memory')">Start our little story 💌</button>
   </header>
   <nav class="quick-nav" aria-label="Surprise sections">
-    <a href="#our-memory">🍝 Our memory</a>
-    <a href="#gifts">🎁 Little gifts</a>
-    <a href="#feelings">💌 My words</a>
-    <a href="#final-surprise">✨ Final surprise</a>
+    <a href="#/home" data-route="home" aria-current="page">🏠 Home</a>
+    <a href="#/memory" data-route="memory">🍝 Our memory</a>
+    <a href="#/gifts" data-route="gifts">🎁 Little gifts</a>
+    <a href="#/feelings" data-route="feelings">💌 My words</a>
+    <a href="#/letter" data-route="letter">💗 Love letter</a>
+    <a href="#/final" data-route="final">✨ Final surprise</a>
   </nav>
 
-  <section class="panel" id="our-memory">
+  <section class="panel route-page" data-route-page="memory" id="our-memory">
+    <div class="route-heading"><span class="route-icon">🍝💗</span><div class="eyebrow">your own little memory page</div></div>
     <div class="eyebrow">one memory I'll keep smiling about</div>
     <h2>Our white-pasta & pizza moment 🍝🍕</h2>
     <div class="letter">Tannu Baby,
@@ -143,7 +160,8 @@ Until then, I'm keeping our pasta-and-pizza memory safe in my heart. Maybe next 
 <div class="signature">Your hug-waiting person ♡</div></div>
   </section>
 
-  <section class="panel" id="feelings">
+  <section class="panel route-page" data-route-page="feelings" id="feelings">
+    <div class="route-heading"><span class="route-icon">💌🩵</span><div class="eyebrow">a page full of feelings</div></div>
     <div class="eyebrow">read this with your heart</div>
     <h2>If I could tell you one thing… 🩵</h2>
     <div class="letter">Tannu Baby,
@@ -161,7 +179,8 @@ If you're smiling right now, keep that smile for a little longer. And if you're 
 <div class="signature">Always wishing you happiness ♡</div></div>
   </section>
 
-  <section class="panel" id="gifts">
+  <section class="panel route-page" data-route-page="gifts" id="gifts">
+    <div class="route-heading"><span class="route-icon">🎁💗</span><div class="eyebrow">your gifts are waiting</div></div>
     <div class="eyebrow">three tiny presents</div>
     <h2>Pick a gift, my love 🎁</h2>
     <p class="muted">Each little box has something from my heart. Tap all three — there are no wrong choices. 🩵</p>
@@ -173,8 +192,8 @@ If you're smiling right now, keep that smile for a little longer. And if you're 
     <div class="reveal" id="reveal" role="status" aria-live="polite"></div>
   </section>
 
-  <section class="panel">
-    <div class="eyebrow">sealed with all my love</div>
+  <section class="panel route-page" data-route-page="letter" id="love-letter">
+    <div class="route-heading"><span class="route-icon">💗💌</span><div class="eyebrow">sealed with all my love</div></div>
     <h2>A little letter for you 💌</h2>
     <div class="letter">My dearest Tannu Baby,
 
@@ -191,7 +210,8 @@ You're my favourite little plot twist, my soft place to land, and my Tannu Baby.
 <div class="signature">Yours, with love ♡</div></div>
   </section>
 
-  <section class="panel final-card" id="final-surprise">
+  <section class="panel final-card route-page" data-route-page="final" id="final-surprise">
+    <div class="route-heading"><span class="route-icon">✨🧸💗</span><div class="eyebrow">the most special page</div></div>
     <div class="eyebrow">one last thing…</div>
     <div class="final-heart">💗</div>
     <h2>One last thing, Babu… 💗</h2>
@@ -204,9 +224,11 @@ You're my favourite little plot twist, my soft place to land, and my Tannu Baby.
       <span style="color:#397fae;font-weight:800">No special occasion needed. Your existence is already a reason to celebrate. And if you ever forget how lovely you are, come back here and let these words remind you again. 💗</span>
     </div>
   </section>
-  <div class="footer">Made with a whole lot of love, just for Tannu Baby 🩵<br>✧ keep this little page for a rainy day ✧</div>
+  <div class="footer">Made with a whole lot of love, just for Tannu Baby 🩵<br>✧ every button opens a new little love page ✧</div>
 </main>
 <script>
+const initialRoute=location.hash.startsWith('#/')?location.hash.slice(2):'home';
+showRoute(initialRoute,false);
 const floaties = document.getElementById('floaties');
 const symbols = ['♡','✦','🩵','☁️','💗'];
 for(let i=0;i<18;i++){
@@ -223,23 +245,43 @@ const giftMessages = [
   'Imagine the biggest, coziest hug — the kind that says “breathe, I’m here, and you don’t have to handle every little thing all at once.” Sending you one right now. 🫂💗',
   'My wish for you: peaceful mornings, exciting little adventures, people who cherish you, dreams that come closer every day, and a hundred unexpected reasons to smile. 🌷✨'
 ];
-// Staggered reveal as each section enters the screen
-const motionSections = document.querySelectorAll('.panel');
-if ('IntersectionObserver' in window) {
-  motionSections.forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(18px)';
-    section.style.transition = 'opacity .75s ease, transform .75s ease';
-  });
-  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
-    }
-  }), {threshold: 0.12});
-  motionSections.forEach(section => observer.observe(section));
+// Route pages use their own entrance animation; avoid hiding inactive pages.
+function loveRain(count=24){
+  const hearts=['💗','🩵','💖','💕','💘','🌸','✨','🥹'];
+  for(let i=0;i<count;i++){
+    const el=document.createElement('span');
+    el.className='love-rain';
+    el.textContent=hearts[Math.floor(Math.random()*hearts.length)];
+    el.style.setProperty('--left',Math.random()*100+'vw');
+    el.style.setProperty('--size',(16+Math.random()*22)+'px');
+    el.style.setProperty('--duration',(2.4+Math.random()*2.8)+'s');
+    el.style.setProperty('--drift',((Math.random()-.5)*180)+'px');
+    el.style.animationDelay=(Math.random()*.65)+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),5600);
+  }
 }
+const routeTitles={home:'Home',memory:'Our memory',gifts:'Little gifts',feelings:'My words',letter:'Love letter',final:'Final surprise'};
+function showRoute(route,animate=true){
+  if(!routeTitles[route]) route='home';
+  document.querySelectorAll('[data-route-page]').forEach(page=>{
+    const active=page.dataset.routePage===route;
+    page.classList.toggle('route-active',active);
+    page.setAttribute('aria-hidden',String(!active));
+  });
+  document.querySelectorAll('[data-route]').forEach(link=>{
+    if(link.dataset.route===route) link.setAttribute('aria-current','page');
+    else link.removeAttribute('aria-current');
+  });
+  if(location.hash!=='#/'+route) history.replaceState(null,'','#/'+route);
+  window.scrollTo({top:0,behavior:animate?'smooth':'auto'});
+  if(animate){loveRain(route==='final'?48:28);burst(route==='final'?28:12);}
+}
+document.querySelectorAll('[data-route]').forEach(link=>link.addEventListener('click',event=>{
+  event.preventDefault();
+  showRoute(link.dataset.route);
+}));
+window.addEventListener('hashchange',()=>showRoute(location.hash.replace(/^#\//,''),true));
 function revealGift(index){
   const box=document.getElementById('reveal');
   box.innerHTML=giftMessages[index];
