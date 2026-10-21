@@ -294,6 +294,18 @@ function loveRain(count=24){
   }
 }
 const routeTitles={home:'Home',memory:'Our memory',gifts:'Little gifts',feelings:'My words',letter:'Love letter',final:'Final surprise'};
+document.querySelectorAll('[data-route-page]:not([data-route-page="home"])').forEach(page=>{
+  if(page.querySelector('.route-back')) return;
+  const back=document.createElement('div');
+  back.className='route-back';
+  const button=document.createElement('button');
+  button.className='pill';
+  button.type='button';
+  button.textContent='💗 Back to Surprise Home';
+  button.addEventListener('click',()=>showRoute('home'));
+  back.appendChild(button);
+  page.appendChild(back);
+});
 function enterLoveWorld(){
   document.body.classList.remove('landing-mode');
   showRoute('home',false);
