@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#dff3ff">
+<title>For Tannu Baby 💗 — Animated Love Surprise</title>
+<style>
+  :root{--sky:#dff3ff;--blue:#8ccdf2;--deep:#397fae;--ink:#23445b;--white:#fff;--pink:#ffd9e8;--lav:#e9e3ff}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,-apple-system,sans-serif;color:var(--ink);background:linear-gradient(160deg,#f9fdff 0%,#e5f5ff 45%,#f4efff 100%);min-height:100vh;overflow-x:hidden}
+  button{font:inherit;cursor:pointer}
+  .floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+  .floaty{position:absolute;bottom:-50px;opacity:.5;animation:rise linear infinite;font-size:clamp(18px,4vw,30px)}
+  @keyframes rise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+  .wrap{position:relative;z-index:1;width:min(920px,100%);margin:auto;padding:20px 16px 54px}
+  .topline{text-align:center;font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;color:#568db1;margin:12px 0 22px}
+  .hero{position:relative;text-align:center;padding:36px 18px 30px;border:1px solid #fff;border-radius:32px;background:#ffffffb8;box-shadow:0 18px 55px #8abfe52b;overflow:hidden}
+  .tiny-stars{color:#72bce8;letter-spacing:.6em;font-size:1.2rem}
+  .hero h1{font-size:clamp(2.5rem,9vw,5.7rem);line-height:1.02;letter-spacing:-.06em;margin:14px 0 12px;color:#3983b4}
+  .hero h1 span{display:block;color:#e78eaf;font-size:.63em;letter-spacing:-.035em;margin-top:8px}
+  .hero p{max-width:520px;margin:0 auto;color:#55748a;font-size:1.04rem;line-height:1.7}
+  .bear{font-size:clamp(4.2rem,18vw,8rem);display:block;filter:drop-shadow(0 8px 0 #b7e4fa);animation:bob 3s ease-in-out infinite}
+  @keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}
+  .pill{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:14px 22px;background:linear-gradient(135deg,#8ccdf2,#b9e5ff);color:#174c70;font-weight:800;box-shadow:0 7px 0 #68b3e1;margin-top:23px;transition:transform .2s}
+  .pill:active{transform:translateY(4px);box-shadow:0 3px 0 #68b3e1}
+  section{margin-top:22px}
+  .panel{border:1px solid #fff;background:#ffffffbd;border-radius:26px;padding:25px 20px;box-shadow:0 12px 36px #8abfe51c}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;color:#6ba3c7;font-weight:800}
+  h2{font-size:clamp(1.7rem,6vw,2.4rem);line-height:1.15;margin:8px 0 10px;color:#397fae}
+  .muted{color:#607e92;line-height:1.65}
+  .gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+  .gift{min-height:148px;border:1px solid #d5edfb;border-radius:20px;background:linear-gradient(160deg,#fff,#eef9ff);color:var(--ink);padding:18px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;box-shadow:0 6px 0 #c8e8fa;transition:transform .2s,box-shadow .2s}
+  .gift:hover{transform:translateY(-4px);box-shadow:0 10px 0 #c8e8fa}
+  .gift .emoji{font-size:2.7rem}
+  .gift strong{font-size:.95rem}
+  .gift small{font-size:.75rem;color:#7091a6}
+  .reveal{display:none;margin-top:16px;padding:18px;border-radius:18px;background:linear-gradient(135deg,#edf9ff,#fff2f8);border:1px dashed #a9d7f2;line-height:1.7;animation:pop .35s ease}
+  .reveal.show{display:block}
+  @keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+  .letter{background:linear-gradient(145deg,#fff,#f1faff);border:1px solid #d9effb;border-radius:22px;padding:23px 20px;line-height:1.9;font-size:1.02rem;white-space:pre-line}
+  .signature{font-family:"Brush Script MT","Segoe Script",cursive;font-size:1.8rem;color:#df83a6;margin-top:12px}
+  .final-card{text-align:center;background:linear-gradient(145deg,#dff3ff,#f7f1ff,#fff);overflow:hidden}
+  .final-heart{font-size:4.2rem;animation:heartbeat 1.3s ease-in-out infinite;display:inline-block}
+  @keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.16)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
+  .secret{display:none;margin-top:16px;font-size:1.1rem;line-height:1.8;background:#ffffffb8;border-radius:18px;padding:20px}
+  .secret.show{display:block;animation:pop .45s ease}
+  .footer{text-align:center;color:#7192a8;font-size:.85rem;padding:24px 8px}
+  .sprinkle{position:fixed;z-index:9;pointer-events:none;animation:burst 1.7s ease-out forwards;font-size:22px}
+  @keyframes burst{from{transform:translate(0,0) scale(.5);opacity:1}to{transform:translate(var(--x),var(--y)) rotate(240deg) scale(1.2);opacity:0}}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(2px);opacity:.55}
+  .hero::before{width:180px;height:180px;background:#c8edff;top:-95px;left:-55px;animation:cloud-drift 7s ease-in-out infinite alternate}
+  .hero::after{width:150px;height:150px;background:#ffe1ed;right:-65px;bottom:-75px;animation:cloud-drift 9s ease-in-out infinite alternate-reverse}
+  .hero>*{position:relative;z-index:1}
+  .hero h1{animation:fade-up .9s both}
+  .hero p{animation:fade-up 1.2s .12s both}
+  .hero .pill{animation:fade-up 1.2s .25s both, soft-glow 2.8s 1.5s ease-in-out infinite}
+  .panel{animation:fade-up .8s both}
+  .gift{position:relative;overflow:hidden}
+  .gift::after{content:"";position:absolute;inset:-60% auto -60% -45%;width:30%;transform:rotate(22deg);background:#ffffff9c;transition:left .6s}
+  .gift:hover::after{left:130%}
+  .gift .emoji{animation:gift-bob 2.4s ease-in-out infinite}
+  .gift:nth-child(2) .emoji{animation-delay:.3s}
+  .gift:nth-child(3) .emoji{animation-delay:.6s}
+  .letter{position:relative;overflow:hidden}
+  .letter::after{content:"♡  ✦  ♡";position:absolute;right:12px;top:8px;color:#b9e3f9;letter-spacing:.3em;animation:twinkle 3s ease-in-out infinite}
+  .final-card{position:relative}
+  .final-card::before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:#fff9;left:50%;top:30px;transform:translateX(-50%);animation:halo 4s ease-in-out infinite;pointer-events:none}
+  .final-card>*{position:relative}
+  @keyframes fade-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes cloud-drift{from{transform:translate(0,0) scale(1)}to{transform:translate(22px,14px) scale(1.12)}}
+  @keyframes gift-bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-5px) rotate(-4deg)}}
+  @keyframes soft-glow{0%,100%{filter:drop-shadow(0 0 0 #a5dcff)}50%{filter:drop-shadow(0 0 9px #9ddaff)}}
+  @keyframes twinkle{0%,100%{opacity:.45;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
+  @keyframes halo{0%,100%{transform:translateX(-50%) scale(.9);opacity:.5}50%{transform:translateX(-50%) scale(1.08);opacity:.95}}
+  .floaty{will-change:transform}
+  .quick-nav{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 5px;scrollbar-width:none;position:sticky;top:0;z-index:5;background:linear-gradient(180deg,#edf8ffed,#edf8ffbd);backdrop-filter:blur(12px);margin:0 -2px 6px}
+  .quick-nav::-webkit-scrollbar{display:none}
+  .quick-nav a{flex:0 0 auto;text-decoration:none;color:#397fae;background:#ffffffdc;border:1px solid #cce9fa;border-radius:999px;padding:10px 13px;font-size:.82rem;font-weight:800;box-shadow:0 3px 0 #d5edfb}
+  .quick-nav a:active{transform:translateY(2px);box-shadow:0 1px 0 #d5edfb}
+  .hero{isolation:isolate}
+  .hero .pill{min-height:48px}
+  .gift{min-height:118px;touch-action:manipulation}
+  .gift:focus-visible,.pill:focus-visible,.quick-nav a:focus-visible{outline:3px solid #e78eaf;outline-offset:3px}
+  .letter{overflow-wrap:anywhere}
+  .panel{scroll-margin-top:76px}
+  @media(max-width:520px){
+    .wrap{padding:8px 11px 28px}
+    .topline{margin:8px 0 14px;letter-spacing:.1em}
+    .hero{padding:23px 15px 25px;border-radius:24px}
+    .hero p{font-size:.98rem}
+    .bear{font-size:5rem}
+    .quick-nav{margin:0 -11px 5px;padding:12px 11px 8px}
+    .quick-nav a{font-size:.78rem;padding:10px 12px}
+    .panel{padding:19px 14px;border-radius:22px;margin-top:15px;scroll-margin-top:72px}
+    .letter{padding:18px 15px;font-size:.96rem;line-height:1.82}
+    .gift-grid{margin-top:15px}
+    .gift{min-height:92px;border-radius:17px}
+    .pill{width:100%;justify-content:center}
+    .final-heart{font-size:3.5rem}
+  }
+  @media(max-width:520px){.wrap{padding:12px 12px 36px}.hero{padding:28px 15px;border-radius:26px}.panel{padding:21px 15px}.gift-grid{grid-template-columns:1fr;gap:13px}.gift{min-height:105px;flex-direction:row;justify-content:flex-start;padding:15px 20px;text-align:left}.gift .emoji{font-size:2.5rem;width:58px}.gift strong{display:block}.gift small{display:block;margin-top:4px}.topline{font-size:.7rem}}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="floaties" id="floaties" aria-hidden="true"></div>
+<main class="wrap">
+  <div class="topline">a little surprise, made only for you 🩵</div>
+  <header class="hero">
+    <div class="tiny-stars">✦ · ˚ ✧ · ˚ ✦</div>
+    <span class="bear" aria-hidden="true">🧸</span>
+    <h1>Hey, Tannu Baby!<span>my favourite person 💗</span></h1>
+    <p>I made this tiny surprise just for you, Babu. Tap slowly, open the little gifts, and save the sweetest part for last. Every word comes from my heart. 🩵</p>
+    <button class="pill" onclick="document.getElementById('our-memory').scrollIntoView({behavior:'smooth'})">Start our little story 💌</button>
+  </header>
+  <nav class="quick-nav" aria-label="Surprise sections">
+    <a href="#our-memory">🍝 Our memory</a><a href="#gifts">🎁 Little gifts</a><a href="#feelings">💌 My words</a><a href="#final-surprise">✨ Final surprise</a>
+  </nav>
+  <section class="panel" id="our-memory">
+    <div class="eyebrow">one memory I'll keep smiling about</div><h2>Our white-pasta & pizza moment 🍝🍕</h2>
+    <div class="letter">Tannu Baby,
+
+Do you remember our white pasta and pizza moment? 🥹💗 The day we ate white pasta and pizza together felt so simple, but somehow it became one of my favourite memories with you. Maybe it was just food for the world, but for me, it was the happiness of sharing that little moment with you.
+
+I still think about how amazing it was — sitting together, eating our favourite things, and having a memory that feels warm whenever I remember it. Sometimes the smallest moments become the ones our heart keeps the closest.
+
+And Baby… there's one little thing I want to say with a smile 😚💕 You never really hug me! I want one proper, warm hug from you — the kind where we don't need to say anything, just stay there for a little moment and feel close. No pressure, just one day when you feel like it, I'd love that hug from you.
+
+Until then, I'm keeping our pasta-and-pizza memory safe in my heart. Maybe next time we can make an even sweeter memory together. 🩵
+
+<div class="signature">Your hug-waiting person ♡</div></div>
+  </section>
+  <section class="panel" id="feelings">
+    <div class="eyebrow">read this with your heart</div><h2>If I could tell you one thing… 🩵</h2>
+    <div class="letter">Tannu Baby,
+
+I don't know if I always say things perfectly. Maybe sometimes I can't explain what you mean to me, and maybe a simple “I miss you” or “I love you” feels too small for everything I carry in my heart.
+
+But if you could see yourself through my eyes, even for a moment, I hope you'd understand why you matter so much. You are not just someone I think about when I have free time. You are someone who quietly finds a place in my thoughts in the middle of an ordinary day.
+
+I hope life is gentle with you. I hope your worries become lighter, your dreams come closer, and you never feel like you have to hide your tired days from the world. You deserve to be loved on the days when you're glowing and on the days when you don't feel like yourself at all.
+
+I can't promise every day will be perfect. But I can promise that this message is real: you are precious, you are appreciated, and your happiness matters to me more than a webpage could ever show.
+
+If you're smiling right now, keep that smile for a little longer. And if you're having a difficult day, let this be your tiny reminder that you are not difficult to love. You are Tannu Baby — and that is already something beautiful. 💗
+
+<div class="signature">Always wishing you happiness ♡</div></div>
+  </section>
+  <section class="panel" id="gifts">
+    <div class="eyebrow">three tiny presents</div><h2>Pick a gift, my love 🎁</h2>
+    <p class="muted">Each little box has something from my heart. Tap all three — there are no wrong choices. 🩵</p>
+    <div class="gift-grid">
+      <button class="gift" onclick="revealGift(0)"><span class="emoji">🎀</span><span><strong>A little reminder</strong><small>Something I hope you never forget</small></span></button>
+      <button class="gift" onclick="revealGift(1)"><span class="emoji">🫧</span><span><strong>A pocket hug</strong><small>For whenever you need one</small></span></button>
+      <button class="gift" onclick="revealGift(2)"><span class="emoji">🌷</span><span><strong>A wish for you</strong><small>A tiny dream sent your way</small></span></button>
+    </div><div class="reveal" id="reveal" role="status" aria-live="polite"></div>
+  </section>
+  <section class="panel">
+    <div class="eyebrow">sealed with all my love</div><h2>A little letter for you 💌</h2>
+    <div class="letter">My dearest Tannu Baby,
+
+If I could wrap a feeling and place it gently in your hands, it would be the warmth I feel whenever you cross my mind. You make ordinary moments feel softer and the world a little brighter. Sometimes I wish you could borrow my eyes for a moment, just so you could see how special you are to me.
+
+I hope you always remember that you don't have to be perfect, have all the answers, or smile every second to be precious to me. You are wonderful as you are — on your happiest days and on the days when everything feels a bit too much.
+
+If this page could do one thing, I hope it makes you smile and reminds you that somewhere in this big world, someone is cheering for you, thinking of you, and wishing you all the gentleness and happiness you deserve.
+
+So here's a tiny promise: I'll keep finding little ways to remind you that you matter. Not only when the day is beautiful, but also when it feels long, quiet, or heavy. You never need a special reason to deserve care.
+
+You're my favourite little plot twist, my soft place to land, and my Tannu Baby. 🩵
+
+<div class="signature">Yours, with love ♡</div></div>
+  </section>
+  <section class="panel final-card" id="final-surprise">
+    <div class="eyebrow">one last thing…</div><div class="final-heart">💗</div><h2>One last thing, Babu… 💗</h2>
+    <p class="muted">No photo could capture this feeling. So I made you a little moment instead.</p>
+    <button class="pill" onclick="openSecret()">Tap for one last surprise ✨</button>
+    <div class="secret" id="secret" aria-live="polite"><div style="font-size:2.6rem">💐🧸🩵</div>
+      <strong>Tannu Baby, if this little page could hug you, it would hold you close for a moment longer. 💗</strong><br>
+      If I could choose one little thing for you today, it would be this: may you feel loved in the quiet moments, laugh until your cheeks hurt, and never forget how much light you bring into the world.<br><br>
+      <span style="color:#397fae;font-weight:800">No special occasion needed. Your existence is already a reason to celebrate. And if you ever forget how lovely you are, come back here and let these words remind you again. 💗</span>
+    </div>
+  </section>
+  <div class="footer">Made with a whole lot of love, just for Tannu Baby 🩵<br>✧ keep this little page for a rainy day ✧</div>
+</main>
+<script>
+const floaties = document.getElementById('floaties');
+const symbols = ['♡','✦','🩵','☁️','💗'];
+for(let i=0;i<18;i++){const el=document.createElement('span');el.className='floaty';el.textContent=symbols[i%symbols.length];el.style.left=(Math.random()*100)+'%';el.style.animationDuration=(9+Math.random()*13)+'s';el.style.animationDelay=(-Math.random()*18)+'s';el.style.fontSize=(16+Math.random()*18)+'px';floaties.appendChild(el);}
+const giftMessages = [
+'Please never forget this, Tannu Baby: you deserve kindness, patience, joy, and a love that makes you feel safe being exactly who you are. You do not have to earn your place in someone’s heart. 🩵',
+'Imagine the biggest, coziest hug — the kind that says “breathe, I’m here, and you don’t have to handle every little thing all at once.” Sending you one right now. 🫂💗',
+'My wish for you: peaceful mornings, exciting little adventures, people who cherish you, dreams that come closer every day, and a hundred unexpected reasons to smile. 🌷✨'
+];
+const motionSections=document.querySelectorAll('.panel');
+if('IntersectionObserver' in window){motionSections.forEach(section=>{section.style.opacity='0';section.style.transform='translateY(18px)';section.style.transition='opacity .75s ease, transform .75s ease';});const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)';observer.unobserve(entry.target);}}),{threshold:0.12});motionSections.forEach(section=>observer.observe(section));}
+function revealGift(index){const box=document.getElementById('reveal');box.innerHTML=giftMessages[index];box.classList.add('show');burst(8);}
+function openSecret(){document.getElementById('secret').classList.add('show');burst(34);}
+function burst(count){const emojis=['💗','🩵','✨','♡','🌸','💫'];for(let i=0;i<count;i++){const el=document.createElement('span');el.className='sprinkle';el.textContent=emojis[Math.floor(Math.random()*emojis.length)];el.style.left=(35+Math.random()*30)+'vw';el.style.top=(35+Math.random()*25)+'vh';el.style.setProperty('--x',((Math.random()-.5)*window.innerWidth*.9)+'px');el.style.setProperty('--y',(-40-Math.random()*window.innerHeight*.6)+'px');document.body.appendChild(el);setTimeout(()=>el.remove(),1800);}}
+</script>
+</body>
+</html>
