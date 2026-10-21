@@ -3,447 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="A little blue-and-white love surprise made especially for Tannu Baby.">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#dff3ff">
-<title>For Tannu Baby 💗 — Animated Love Surprise</title>
+<meta name="theme-color" content="#eaf6ff">
+<meta name="description" content="A birthday surprise made with love for Tannu Baby 💙">
+<title>Happy Birthday Tannu Baby 💙🎂</title>
 <style>
-  :root{--sky:#dff3ff;--blue:#8ccdf2;--deep:#397fae;--ink:#23445b;--white:#fff;--pink:#ffd9e8;--lav:#e9e3ff}
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth;text-size-adjust:100%;-webkit-text-size-adjust:100%}
-  img{max-width:100%;height:auto}
-  button,a{-webkit-tap-highlight-color:transparent}
-  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-  body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,-apple-system,sans-serif;color:var(--ink);background:linear-gradient(160deg,#f9fdff 0%,#e5f5ff 45%,#f4efff 100%);min-height:100vh;overflow-x:hidden}
-  button{font:inherit;cursor:pointer}
-  .floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
-  .floaty{position:absolute;bottom:-50px;opacity:.5;animation:rise linear infinite;font-size:clamp(18px,4vw,30px)}
-  @keyframes rise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
-  .wrap{position:relative;z-index:1;width:min(920px,100%);margin:auto;padding:20px 16px 54px}
-  .topline{text-align:center;font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;color:#568db1;margin:12px 0 22px}
-  .hero{position:relative;text-align:center;padding:36px 18px 30px;border:1px solid #fff;border-radius:32px;background:#ffffffb8;box-shadow:0 18px 55px #8abfe52b;overflow:hidden}
-  .tiny-stars{color:#72bce8;letter-spacing:.6em;font-size:1.2rem}
-  .hero h1{font-size:clamp(2.5rem,9vw,5.7rem);line-height:1.02;letter-spacing:-.06em;margin:14px 0 12px;color:#3983b4}
-  .hero h1 span{display:block;color:#e78eaf;font-size:.63em;letter-spacing:-.035em;margin-top:8px}
-  .hero p{max-width:520px;margin:0 auto;color:#55748a;font-size:1.04rem;line-height:1.7}
-  .bear{font-size:clamp(4.2rem,18vw,8rem);display:block;filter:drop-shadow(0 8px 0 #b7e4fa);animation:bob 3s ease-in-out infinite}
-  @keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}
-  .pill{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:14px 22px;background:linear-gradient(135deg,#8ccdf2,#b9e5ff);color:#174c70;font-weight:800;box-shadow:0 7px 0 #68b3e1;margin-top:23px;transition:transform .2s}
-  .pill:active{transform:translateY(4px);box-shadow:0 3px 0 #68b3e1}
-  section{margin-top:22px}
-  .panel{border:1px solid #fff;background:#ffffffbd;border-radius:26px;padding:25px 20px;box-shadow:0 12px 36px #8abfe51c}
-  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;color:#6ba3c7;font-weight:800}
-  h2{font-size:clamp(1.7rem,6vw,2.4rem);line-height:1.15;margin:8px 0 10px;color:#397fae}
-  .muted{color:#607e92;line-height:1.65}
-  .gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
-  .gift{min-height:148px;border:1px solid #d5edfb;border-radius:20px;background:linear-gradient(160deg,#fff,#eef9ff);color:var(--ink);padding:18px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;box-shadow:0 6px 0 #c8e8fa;transition:transform .2s,box-shadow .2s}
-  .gift:hover{transform:translateY(-4px);box-shadow:0 10px 0 #c8e8fa}
-  .gift .emoji{font-size:2.7rem}
-  .gift strong{font-size:.95rem}
-  .gift small{font-size:.75rem;color:#7091a6}
-  .reveal{display:none;margin-top:16px;padding:18px;border-radius:18px;background:linear-gradient(135deg,#edf9ff,#fff2f8);border:1px dashed #a9d7f2;line-height:1.7;animation:pop .35s ease}
-  .reveal.show{display:block}
-  @keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
-  .letter{background:linear-gradient(145deg,#fff,#f1faff);border:1px solid #d9effb;border-radius:22px;padding:23px 20px;line-height:1.9;font-size:1.02rem;white-space:pre-line}
-  .signature{font-family:"Brush Script MT","Segoe Script",cursive;font-size:1.8rem;color:#df83a6;margin-top:12px}
-  .final-card{text-align:center;background:linear-gradient(145deg,#dff3ff,#f7f1ff,#fff);overflow:hidden}
-  .final-heart{font-size:4.2rem;animation:heartbeat 1.3s ease-in-out infinite;display:inline-block}
-  @keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.16)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
-  .secret{display:none;margin-top:16px;font-size:1.1rem;line-height:1.8;background:#ffffffb8;border-radius:18px;padding:20px}
-  .secret.show{display:block;animation:pop .45s ease}
-  .footer{text-align:center;color:#7192a8;font-size:.85rem;padding:24px 8px}
-  .sprinkle{position:fixed;z-index:9;pointer-events:none;animation:burst 1.7s ease-out forwards;font-size:22px}
-  @keyframes burst{from{transform:translate(0,0) scale(.5);opacity:1}to{transform:translate(var(--x),var(--y)) rotate(240deg) scale(1.2);opacity:0}}
-
-  /* Extra romantic motion */
-  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(2px);opacity:.55}
-  .hero::before{width:180px;height:180px;background:#c8edff;top:-95px;left:-55px;animation:cloud-drift 7s ease-in-out infinite alternate}
-  .hero::after{width:150px;height:150px;background:#ffe1ed;right:-65px;bottom:-75px;animation:cloud-drift 9s ease-in-out infinite alternate-reverse}
-  .hero>*{position:relative;z-index:1}
-  .hero h1{animation:fade-up .9s both}
-  .hero p{animation:fade-up 1.2s .12s both}
-  .hero .pill{animation:fade-up 1.2s .25s both, soft-glow 2.8s 1.5s ease-in-out infinite}
-  .panel{animation:fade-up .8s both}
-  .gift{position:relative;overflow:hidden}
-  .gift::after{content:"";position:absolute;inset:-60% auto -60% -45%;width:30%;transform:rotate(22deg);background:#ffffff9c;transition:left .6s}
-  .gift:hover::after{left:130%}
-  .gift .emoji{animation:gift-bob 2.4s ease-in-out infinite}
-  .gift:nth-child(2) .emoji{animation-delay:.3s}
-  .gift:nth-child(3) .emoji{animation-delay:.6s}
-  .letter{position:relative;overflow:hidden}
-  .letter::after{content:"♡  ✦  ♡";position:absolute;right:12px;top:8px;color:#b9e3f9;letter-spacing:.3em;animation:twinkle 3s ease-in-out infinite}
-  .final-card{position:relative}
-  .final-card::before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:#fff9;left:50%;top:30px;transform:translateX(-50%);animation:halo 4s ease-in-out infinite;pointer-events:none}
-  .final-card>*{position:relative}
-  @keyframes fade-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-  @keyframes cloud-drift{from{transform:translate(0,0) scale(1)}to{transform:translate(22px,14px) scale(1.12)}}
-  @keyframes gift-bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-5px) rotate(-4deg)}}
-  @keyframes soft-glow{0%,100%{filter:drop-shadow(0 0 0 #a5dcff)}50%{filter:drop-shadow(0 0 9px #9ddaff)}}
-  @keyframes twinkle{0%,100%{opacity:.45;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
-  @keyframes halo{0%,100%{transform:translateX(-50%) scale(.9);opacity:.5}50%{transform:translateX(-50%) scale(1.08);opacity:.95}}
-  .floaty{will-change:transform}
-
-
-  .quick-nav{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 5px;scrollbar-width:none;position:sticky;top:0;z-index:5;background:linear-gradient(180deg,#edf8ffed,#edf8ffbd);backdrop-filter:blur(12px);margin:0 -2px 6px}
-  .quick-nav::-webkit-scrollbar{display:none}
-  .quick-nav a{flex:0 0 auto;text-decoration:none;color:#397fae;background:#ffffffdc;border:1px solid #cce9fa;border-radius:999px;padding:10px 13px;font-size:.82rem;font-weight:800;box-shadow:0 3px 0 #d5edfb}
-  .quick-nav a:active{transform:translateY(2px);box-shadow:0 1px 0 #d5edfb}
-  .hero{isolation:isolate}
-  .hero .pill{min-height:48px}
-  .gift{min-height:118px;touch-action:manipulation}
-  .gift:focus-visible,.pill:focus-visible,.quick-nav a:focus-visible{outline:3px solid #e78eaf;outline-offset:3px}
-  .letter{overflow-wrap:anywhere}
-  .panel{scroll-margin-top:76px}
-  /* Each surprise opens as its own romantic route/page */
-  .route-page{display:none!important;min-height:58vh}
-  .route-page.route-active{display:block!important;animation:route-enter .65s cubic-bezier(.2,.8,.2,1) both}
-  .hero.route-page{display:none!important}
-  body.landing-mode .quick-nav{display:none!important}
-  body.landing-mode .route-page{display:none!important}
-  body.landing-mode .hero.route-page.route-active{display:block!important}
-  body.landing-mode .topline{display:block}
-  body.landing-mode .footer{display:none}
-  .welcome-screen{display:none;min-height:100svh;align-items:center;justify-content:center;text-align:center;padding:26px 16px;position:relative;z-index:2}
-  body.landing-mode .welcome-screen{display:flex}
-  body.landing-mode .wrap{display:none}
-  .welcome-card{width:min(580px,100%);padding:35px 22px;border:1px solid #fff;border-radius:32px;background:#ffffffd9;box-shadow:0 22px 70px #8abfe540;animation:fade-up .9s both}
-  .welcome-card .welcome-bear{font-size:clamp(5rem,22vw,8rem);display:block;animation:bob 2.6s ease-in-out infinite}
-  .welcome-card h1{font-size:clamp(2.5rem,10vw,4.8rem);line-height:1.02;letter-spacing:-.06em;color:#3983b4;margin:15px 0}
-  .welcome-card h1 span{display:block;color:#e78eaf;font-size:.62em;margin-top:10px}
-  .welcome-card p{color:#55748a;line-height:1.8;max-width:420px;margin:0 auto}
-  .welcome-card .pill{margin-top:26px;animation:soft-glow 2s ease-in-out infinite}
-  .welcome-note{font-size:.8rem;color:#7192a8;margin-top:17px}
-  body.landing-mode .floaties{opacity:.85}
-  .hero.route-page.route-active{display:block!important}
-  .quick-nav a[aria-current="page"]{background:linear-gradient(135deg,#ffd9e8,#dff3ff);border-color:#e8a8c3;box-shadow:0 3px 0 #edbfd4}
-  .love-rain{position:fixed;z-index:20;left:var(--left);top:-50px;font-size:var(--size);pointer-events:none;animation:love-fall var(--duration) linear forwards;filter:drop-shadow(0 3px 5px #f2a8c755)}
-  @keyframes route-enter{from{opacity:0;transform:translateY(24px) scale(.985);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
-  @keyframes love-fall{to{transform:translate3d(var(--drift),110vh,0) rotate(420deg);opacity:.1}}
-  .route-heading{text-align:center;margin-bottom:18px}
-  .route-heading .route-icon{font-size:3rem;display:block;animation:heartbeat 1.3s ease-in-out infinite}
-  .route-back{display:flex;justify-content:center;margin-top:18px}
-  .route-back .pill{margin-top:0}
-  @media(max-width:520px){.route-page{min-height:60vh}}
-  @media(max-width:520px){
-    .wrap{padding:8px 11px 28px}
-    .topline{margin:8px 0 14px;letter-spacing:.1em}
-    .hero{padding:23px 15px 25px;border-radius:24px}
-    .hero p{font-size:.98rem}
-    .bear{font-size:5rem}
-    .quick-nav{margin:0 -11px 5px;padding:12px 11px 8px}
-    .quick-nav a{font-size:.78rem;padding:10px 12px}
-    .panel{padding:19px 14px;border-radius:22px;margin-top:15px;scroll-margin-top:72px}
-    .letter{padding:18px 15px;font-size:.96rem;line-height:1.82}
-    .gift-grid{margin-top:15px}
-    .gift{min-height:92px;border-radius:17px}
-    .pill{width:100%;justify-content:center}
-    .final-heart{font-size:3.5rem}
-  }
-
-  @media(max-width:520px){.wrap{padding:12px 12px 36px}.hero{padding:28px 15px;border-radius:26px}.panel{padding:21px 15px}.gift-grid{grid-template-columns:1fr;gap:13px}.gift{min-height:105px;flex-direction:row;justify-content:flex-start;padding:15px 20px;text-align:left}.gift .emoji{font-size:2.5rem;width:58px}.gift strong{display:block}.gift small{display:block;margin-top:4px}.topline{font-size:.7rem}}
-  .photo-gallery{margin-top:28px;padding-top:24px;border-top:1px solid #d5edfb}
-  .photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
-  .photo-grid figure{margin:0;overflow:hidden;border:1px solid #d7ecf8;border-radius:18px;background:#fff;box-shadow:0 6px 18px #8abfe51c}
-  .photo-grid img{display:block;width:100%;height:230px;object-fit:cover;background:#eef8ff;transition:transform .35s}
-  .photo-grid figure:hover img{transform:scale(1.035)}
-  .photo-grid figcaption{padding:11px 12px;color:#55748a;font-size:.88rem;line-height:1.45}
-  @media(max-width:520px){.photo-grid{gap:9px}.photo-grid img{height:170px}.photo-grid figcaption{padding:9px;font-size:.78rem}}
-  /* Premium romantic experience */
-  body{background:radial-gradient(ellipse at 8% 5%,#fff 0,transparent 32%),radial-gradient(ellipse at 92% 28%,#fbe7f2 0,transparent 30%),linear-gradient(160deg,#f9fdff 0%,#e5f5ff 45%,#f4efff 100%);background-attachment:fixed}
-  .wrap{width:min(1000px,100%);padding-top:24px}
-  .hero,.panel,.welcome-card{box-shadow:0 22px 70px #6daedb20,0 2px 10px #ffffffc9;backdrop-filter:blur(14px)}
-  .quick-nav{border:1px solid #ffffffb8;border-radius:999px;padding:12px;margin:0 0 12px;box-shadow:0 12px 28px #8abfe51c}
-  .quick-nav a{transition:transform .22s,background .22s,box-shadow .22s}
-  .quick-nav a:hover{transform:translateY(-2px);background:#f4fbff}
-  .pill{transition:transform .22s,filter .22s,box-shadow .22s}
-  .pill:hover{transform:translateY(-2px);filter:saturate(1.08);box-shadow:0 10px 24px #8ccdf255,0 5px 0 #68b3e1}
-  .panel{border-color:#ffffffeb}
-  .route-heading{padding:8px 0 10px}
-  .route-heading .route-icon{filter:drop-shadow(0 6px 10px #8ccdf255)}
-  .photo-gallery{margin-top:0;padding-top:25px;border-top:0}
-  .photo-grid figure{position:relative;transition:transform .25s,box-shadow .25s;border-color:#fff;box-shadow:0 10px 28px #497ea31a}
-  .photo-grid figure:hover{transform:translateY(-4px);box-shadow:0 18px 32px #497ea329}
-  .photo-grid img{height:clamp(180px,30vw,320px);cursor:zoom-in}
-  .photo-grid figcaption{background:linear-gradient(180deg,#fff,#f7fbff);font-weight:700}
-  .photo-grid figure::after{content:"↗";position:absolute;right:10px;top:10px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:#ffffffd9;color:#397fae;font-weight:900;pointer-events:none}
-  .love-progress{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,#8ccdf2,#f2a5c5,#c6b7ff);z-index:50;box-shadow:0 0 12px #e78eaf88}
-  .love-fab{position:fixed;right:16px;bottom:16px;z-index:12;border:1px solid #fff;background:#ffffffd9;color:#397fae;border-radius:999px;padding:12px 15px;font-weight:900;box-shadow:0 8px 28px #397fae26;backdrop-filter:blur(10px);transition:transform .2s}
-  .love-fab:hover{transform:translateY(-3px) rotate(-2deg)}
-  .photo-lightbox{position:fixed;inset:0;z-index:100;background:#102536e8;backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:20px}
-  .photo-lightbox.open{display:flex;animation:pop .25s ease}
-  .photo-lightbox img{max-width:min(100%,1000px);max-height:82vh;object-fit:contain;border-radius:18px;box-shadow:0 24px 80px #0008}
-  .lightbox-close{position:absolute;right:18px;top:18px;border:1px solid #ffffff55;background:#ffffff1c;color:white;border-radius:999px;padding:11px 15px;font-size:1rem}
-  .lightbox-caption{position:absolute;bottom:18px;left:16px;right:16px;text-align:center;color:#fff;font-weight:700}
-  .welcome-card{border-color:#fff}
-  .footer{line-height:1.9}
-  @media(max-width:520px){.wrap{padding-top:12px}.quick-nav{border-radius:18px}.love-fab{right:10px;bottom:10px;padding:10px 12px}.photo-lightbox{padding:12px}}
-  .photo-teaser{margin-top:22px;padding:22px 18px;text-align:center;border:1px solid #d5edfb;border-radius:22px;background:linear-gradient(135deg,#f4fbff,#fff3f8)}
-  .photo-teaser .pill{margin-top:12px}
-  .photo-grid img{display:block;min-height:160px}
-  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+:root{--blue:#2479bd;--sky:#dff1ff;--ink:#183d61;--pink:#ffb9d2;--paper:#fffdf8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:"Trebuchet MS",system-ui,sans-serif;background-color:#f7fbff;background-image:radial-gradient(#8fc5ed 2px,transparent 2px);background-size:23px 23px;overflow-x:hidden}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}button:focus-visible{outline:3px solid #2479bd;outline-offset:3px}
+.shell{width:min(900px,94%);margin:0 auto;padding:24px 0 60px}.top-note{text-align:center;font-size:clamp(.78rem,2.8vw,.95rem);font-weight:800;color:#fff;background:#143c63;padding:10px 14px;border-radius:14px;margin-bottom:18px;box-shadow:0 5px 0 #9bc8e8}
+.card{position:relative;background:#fffefb;border:3px solid #8cc5ef;border-radius:24px;padding:clamp(18px,4vw,38px);box-shadow:0 12px 0 #c4e3fa,0 20px 45px #174d7618;margin:18px 0;overflow:hidden}
+.card:before,.card:after{content:"✦";position:absolute;color:#8fc7f0;font-size:28px}.card:before{top:12px;left:14px}.card:after{right:14px;bottom:8px}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:900;color:#478fc8;text-align:center}
+h1,h2,h3,p{text-align:center}h1{font-family:Georgia,serif;font-size:clamp(2.1rem,8vw,4.5rem);line-height:1.02;margin:12px 0;color:#153d65;text-shadow:2px 3px 0 #d0eaff}h2{font-family:Georgia,serif;font-size:clamp(1.65rem,5vw,2.5rem);margin:8px 0 14px}p{line-height:1.7}.hero{min-height:420px;display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,#fff,#eaf6ff)}.hero-inner{max-width:650px;margin:auto}.hero-bow{font-size:clamp(3.5rem,14vw,6rem);filter:drop-shadow(0 5px 0 #b9dff9);animation:bob 2.5s ease-in-out infinite}.subtitle{font-size:clamp(1rem,3.5vw,1.2rem);max-width:530px;margin:0 auto 20px}.btnrow{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:20px}.btn{border:0;border-radius:999px;padding:13px 23px;font-weight:900;box-shadow:0 5px 0 #9dc9e9;transition:transform .18s,box-shadow .18s}.btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 #9dc9e9}.primary{background:#267fc0;color:white}.secondary{background:#fff;color:#235d8d;border:2px solid #a6d4f5}.tiny{font-size:.85rem}.hide{display:none!important}
+.bunting{font-size:clamp(1.4rem,4vw,2.2rem);letter-spacing:.12em;text-align:center;margin:0 0 8px}.cake{font-size:clamp(5rem,20vw,9rem);line-height:1.15;position:relative;display:inline-block;filter:drop-shadow(0 8px 0 #c6e4fa);margin:10px}.candles{font-size:2.3rem;letter-spacing:5px;display:block;line-height:1}.cake-wrap{text-align:center}.flames{animation:flicker .5s infinite alternate}.wish{min-height:30px;font-weight:800;color:#2a7db7}
+.gift-question{max-width:560px;margin:auto}.bear{font-size:clamp(5rem,18vw,8rem);line-height:1.1;animation:bob 2.3s ease-in-out infinite}.gift-choices{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative;min-height:65px}.no-btn{background:#f4f8ff;color:#29587f;border:2px solid #b4d8f3;box-shadow:none}.gift-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}.gift{background:linear-gradient(160deg,#fff,#eaf6ff);border:2px solid #a5d4f6;border-radius:20px;padding:18px 10px;min-height:155px;color:#17466e;box-shadow:0 6px 0 #d1e9fa;transition:transform .2s}.gift:hover{transform:translateY(-5px) rotate(-1deg)}.gift span{display:block;font-size:3rem;margin-bottom:8px}.gift strong{display:block}.gift small{display:block;margin-top:6px;line-height:1.4}
+.letter{max-width:660px;margin:20px auto 0;padding:25px 22px;background:#fff;border:2px dashed #8dc5ee;border-radius:15px;line-height:1.9;white-space:pre-line;text-align:left;font-family:Georgia,serif}.letter p{text-align:left}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}.photo-grid figure{margin:0;background:white;border:2px solid #b7dcf6;border-radius:16px;overflow:hidden;box-shadow:0 5px 0 #d8ecfa}.photo-grid img{display:block;width:100%;height:clamp(180px,36vw,330px);object-fit:cover;cursor:zoom-in;background:#e9f5ff}figcaption{text-align:center;padding:10px;font-weight:800;font-size:.9rem}.flowers{text-align:center;font-size:clamp(4rem,16vw,7rem);animation:bob 3s infinite}.final{background:linear-gradient(145deg,#fff,#e5f4ff)}.footer{text-align:center;font-size:.8rem;color:#467ba4;padding:15px}
+#modal{position:fixed;inset:0;z-index:10;background:#0d2a47d9;display:none;align-items:center;justify-content:center;padding:18px}#modal.open{display:flex}.modal-box{width:min(560px,100%);max-height:90vh;overflow:auto;background:#fffdf8;border:3px solid #9bcff3;border-radius:24px;padding:28px;text-align:center;box-shadow:0 15px 50px #0004}.modal-emoji{font-size:5rem}.modal-box h2{margin-top:8px}.modal-box p{white-space:pre-line}.lightbox-img{max-width:100%;max-height:70vh;object-fit:contain;border-radius:14px}
+.confetti{position:fixed;top:-20px;z-index:9;pointer-events:none;animation:fall 3.8s linear forwards;font-size:22px}
+@keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}@keyframes flicker{to{transform:scale(1.14);opacity:.7}}@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:.1}}
+@media(max-width:520px){.shell{width:93%;padding-top:14px}.card{border-radius:19px;padding:20px 14px}.hero{min-height:390px}.gift-grid{grid-template-columns:1fr;gap:12px}.gift{min-height:110px;display:flex;align-items:center;justify-content:center;gap:14px;text-align:left;padding:12px}.gift span{margin:0;font-size:2.8rem}.gift small{font-size:.8rem}.photo-grid{gap:8px}.photo-grid img{height:210px}.letter{padding:19px 16px}.top-note{line-height:1.45}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
-<body class="landing-mode">
-<div class="love-progress" id="love-progress" aria-hidden="true"></div>
-<div class="floaties" id="floaties" aria-hidden="true"></div>
-<div class="welcome-screen" id="welcome-screen">
-  <div class="welcome-card">
-    <div class="tiny-stars">✦ · ˚ ✧ · ˚ ✦</div>
-    <span class="welcome-bear" aria-hidden="true">🧸💗</span>
-    <div class="eyebrow">a tiny surprise made just for you</div>
-    <h1>Tannu Baby<span>someone loves you a lot 🩵</span></h1>
-    <p>Babu, I made a little world just for you. There are memories, tiny gifts, words from my heart, and one special surprise waiting inside. Ready, my love? 🥹💗</p>
-    <button class="pill" onclick="enterLoveWorld()">Open your surprise 💌</button>
-    <div class="welcome-note">Psst… tap the button to unlock everything ✨</div>
-  </div>
-</div>
-<main class="wrap">
-  <div class="topline">a little surprise, made only for you 🩵</div>
-  <header class="hero route-page" data-route-page="home" id="home">
-    <div class="tiny-stars">✦ · ˚ ✧ · ˚ ✦</div>
-    <span class="bear" aria-hidden="true">🧸</span>
-    <h1>Hey, Tannu Baby!<span>my favourite person 💗</span></h1>
-    <p>I made this tiny surprise just for you, Babu. Tap slowly, open the little gifts, and save the sweetest part for last. Every word comes from my heart. 🩵</p>
-    <button class="pill" onclick="showRoute('memory')">Start our little story 💌</button>
-  </header>
-  <nav class="quick-nav" aria-label="Surprise sections">
-    <a href="#/home" data-route="home" aria-current="page">🏠 Home</a>
-    <a href="#/memory" data-route="memory">🍝 Our memory</a>
-    <a href="#/photos" data-route="photos">📸 Our photos</a>
-    <a href="#/gifts" data-route="gifts">🎁 Little gifts</a>
-    <a href="#/feelings" data-route="feelings">💌 My words</a>
-    <a href="#/letter" data-route="letter">💗 Love letter</a>
-    <a href="#/final" data-route="final">✨ Final surprise</a>
-  </nav>
+<body>
+<main class="shell">
+<div class="top-note">girl, here's the perfect birthday surprise for the girl who makes my world special 💙🎂</div>
+<section class="card hero" id="welcome"><div class="hero-inner"><div class="hero-bow">🎀</div><div class="eyebrow">a little surprise, made just for you</div><h1>Hey Tannu Baby! 💙</h1><p class="subtitle">I made a tiny world of blue skies, sweet wishes and all the love I have for you. Ready to open your birthday surprise?</p><div class="btnrow"><button class="btn primary" onclick="go('birthday')">Open your surprise ✨</button></div></div></section>
+<section class="card hide" id="birthday"><div class="bunting">💙 ✦ 🎉 ✦ 💙</div><div class="eyebrow">today is all about you</div><h1>Happy Birthday!</h1><h2>Tannu Baby 🩵</h2><div class="cake-wrap"><div class="candles" id="candles"><span class="flames">🕯️ 🕯️ 🕯️</span></div><div class="cake">🎂</div><p class="wish" id="wish">Make a wish, baby! Close your eyes for a second ✨</p><button class="btn primary" id="blow" onclick="blowCandles()">Blow the candles! 🌬️</button></div><p>May your smile stay bright, your heart stay happy, and every little dream find its way to you.</p><div class="btnrow"><button class="btn secondary" onclick="go('question')">Continue your surprise 💌</button></div></section>
+<section class="card hide" id="question"><div class="eyebrow">one tiny question</div><h2>Accept your gifts? 🎁</h2><div class="gift-question"><div class="bear" id="bear">🧸</div><p id="questionText">I picked these with lots and lots of love. Will you accept them, Tannu Baby?</p><div class="gift-choices"><button class="btn primary" onclick="acceptGifts()">YES, of course! 💙</button><button class="btn no-btn" id="noBtn" onmouseenter="moveNo()" onclick="moveNo()">No 🙈</button></div><p class="tiny" id="noHint">Psst… the “No” button is a little shy 😜</p></div></section>
+<section class="card hide" id="gifts"><div class="eyebrow">picked with all my heart</div><h2>Yay! Choose your gift 🎁</h2><p>Each little gift has a piece of my heart inside.</p><div class="gift-grid"><button class="gift" onclick="openGift('flowers')"><span>💐</span><div><strong>Some flowers for you</strong><small>A bouquet that never fades 🌷</small></div></button><button class="gift" onclick="openGift('letter')"><span>💌</span><div><strong>A little love letter</strong><small>Words from my heart to yours</small></div></button><button class="gift" onclick="openGift('memories')"><span>📸</span><div><strong>Our little memories</strong><small>Moments I want to keep forever</small></div></button></div></section>
+<section class="card hide" id="flowers"><div class="eyebrow">just for you</div><h2>Some flowers for you! 💐</h2><div class="flowers">💐</div><p>For the girl who makes ordinary days feel beautiful. If I could, I'd bring you flowers every day just to see that smile. 🌸</p><div class="btnrow"><button class="btn primary" onclick="go('gifts')">Choose another gift</button><button class="btn secondary" onclick="go('letter')">Read your letter 💌</button></div></section>
+<section class="card hide" id="letter"><div class="eyebrow">from my heart to yours</div><h2>A little love letter 💌</h2><div class="letter">My dearest Tannu Baby, 💙
 
-  <section class="panel route-page" data-route-page="memory" id="our-memory">
-    <div class="route-heading"><span class="route-icon">🍝💗</span><div class="eyebrow">your own little memory page</div></div>
-    <div class="eyebrow">one memory I'll keep smiling about</div>
-    <h2>Our white-pasta & pizza moment 🍝🍕</h2>
-    <div class="letter">Tannu Baby,
+Happy Birthday to the sweetest person in my world. I hope today reminds you how loved, precious and special you are to me.
 
-Do you remember our white pasta and pizza moment? 🥹💗 The day we ate white pasta and pizza together felt so simple, but somehow it became one of my favourite memories with you. Maybe it was just food for the world, but for me, it was the happiness of sharing that little moment with you.
+Your smile can make my whole day better. Even the smallest moments with you become memories I want to hold close. I may not always find the perfect words, but one thing is always true: you mean so much to me.
 
-I still think about how amazing it was — sitting together, eating our favourite things, and having a memory that feels warm whenever I remember it. Sometimes the smallest moments become the ones our heart keeps the closest.
+I wish you happiness that lasts, dreams that come true, peaceful days, and a thousand reasons to smile. Keep being your lovely self.
 
-And Baby… there's one little thing I want to say with a smile 😚💕 You never really hug me! I want one proper, warm hug from you — the kind where we don't need to say anything, just stay there for a little moment and feel close. No pressure, just one day when you feel like it, I'd love that hug from you.
+Today, tomorrow, and in all the little moments in between — I'm cheering for you, always.
 
-Until then, I'm keeping our pasta-and-pizza memory safe in my heart. Maybe next time we can make an even sweeter memory together. 🩵
+Happy Birthday, my Tannu Baby. 🩵🎂
 
-<div class="signature">Your hug-waiting person ♡</div></div>
-    <div class="photo-teaser">
-      <div class="eyebrow">our moments together 📸</div>
-      <h2>Want to see our photos? 💗</h2>
-      <p class="muted">Tap below to open the memories you uploaded.</p>
-      <button class="pill" type="button" onclick="showRoute('photos')">Open our photo gallery ✨</button>
-    </div>
-  </section>
-
-    <section class="panel route-page photo-gallery" data-route-page="photos" id="photo-memories">
-      <div class="eyebrow">little moments, big feelings</div>
-      <h2>Our photo memories 📸💗</h2>
-      <p class="muted">Some moments deserve to be kept close. Every picture is a little piece of our story. 🩵</p>
-      <div class="photo-grid">
-        <figure><img src="assets/IMG_20260424_102609.webp" alt="A special memory with Tannu Baby" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>A little moment to remember 💗</figcaption></figure>
-        <figure><img src="assets/IMG_20260424_102611.webp" alt="A happy memory with Tannu Baby" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>Your smile, my favourite ✨</figcaption></figure>
-        <figure><img src="assets/IMG_20260521_134502.webp" alt="A photo memory together" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>One for the heart 🩵</figcaption></figure>
-        <figure><img src="assets/IMG_20260521_134717.webp" alt="A sweet shared memory" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>Little things, lots of love 🌷</figcaption></figure>
-        <figure><img src="assets/IMG_20260524_175811.webp" alt="A precious moment" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>Saved with love 💌</figcaption></figure>
-        <figure><img src="assets/IMG_20260710_152748.webp" alt="A favourite memory" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>My kind of happiness 🥹</figcaption></figure>
-        <figure><img src="assets/IMG_20260710_153538.webp" alt="A memory to keep" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>Us, in a little moment 💞</figcaption></figure>
-        <figure><img src="assets/IMG_20260710_153543.webp" alt="Another sweet photo memory" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>Something I'll always cherish 🌸</figcaption></figure>
-        <figure><img src="assets/IMG_20260825_142514.webp" alt="A special day captured" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>A day worth remembering 🩵</figcaption></figure>
-        <figure><img src="assets/IMG_20260912_143858.webp" alt="A happy photo memory" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>One more reason to smile 💗</figcaption></figure>
-        <figure><img src="assets/IMG_20260912_144231.webp" alt="A final photo memory" loading="lazy" decoding="async" fetchpriority="low" width="900" height="1200"><figcaption>Always a special memory ✨</figcaption></figure>
-      </div>
-    </section>
-  <section class="panel route-page" data-route-page="feelings" id="feelings">
-    <div class="route-heading"><span class="route-icon">💌🩵</span><div class="eyebrow">a page full of feelings</div></div>
-    <div class="eyebrow">read this with your heart</div>
-    <h2>If I could tell you one thing… 🩵</h2>
-    <div class="letter">Tannu Baby,
-
-I don't know if I always say things perfectly. Maybe sometimes I can't explain what you mean to me, and maybe a simple “I miss you” or “I love you” feels too small for everything I carry in my heart.
-
-But if you could see yourself through my eyes, even for a moment, I hope you'd understand why you matter so much. You are not just someone I think about when I have free time. You are someone who quietly finds a place in my thoughts in the middle of an ordinary day.
-
-I hope life is gentle with you. I hope your worries become lighter, your dreams come closer, and you never feel like you have to hide your tired days from the world. You deserve to be loved on the days when you're glowing and on the days when you don't feel like yourself at all.
-
-I can't promise every day will be perfect. But I can promise that this message is real: you are precious, you are appreciated, and your happiness matters to me more than a webpage could ever show.
-
-If you're smiling right now, keep that smile for a little longer. And if you're having a difficult day, let this be your tiny reminder that you are not difficult to love. You are Tannu Baby — and that is already something beautiful. 💗
-
-<div class="signature">Always wishing you happiness ♡</div></div>
-  </section>
-
-  <section class="panel route-page" data-route-page="gifts" id="gifts">
-    <div class="route-heading"><span class="route-icon">🎁💗</span><div class="eyebrow">your gifts are waiting</div></div>
-    <div class="eyebrow">three tiny presents</div>
-    <h2>Pick a gift, my love 🎁</h2>
-    <p class="muted">Each little box has something from my heart. Tap all three — there are no wrong choices. 🩵</p>
-    <div class="gift-grid">
-      <button class="gift" onclick="revealGift(0)"><span class="emoji">🎀</span><span><strong>A little reminder</strong><small>Something I hope you never forget</small></span></button>
-      <button class="gift" onclick="revealGift(1)"><span class="emoji">🫧</span><span><strong>A pocket hug</strong><small>For whenever you need one</small></span></button>
-      <button class="gift" onclick="revealGift(2)"><span class="emoji">🌷</span><span><strong>A wish for you</strong><small>A tiny dream sent your way</small></span></button>
-    </div>
-    <div class="reveal" id="reveal" role="status" aria-live="polite"></div>
-  </section>
-
-  <section class="panel route-page" data-route-page="letter" id="love-letter">
-    <div class="route-heading"><span class="route-icon">💗💌</span><div class="eyebrow">sealed with all my love</div></div>
-    <h2>A little letter for you 💌</h2>
-    <div class="letter">My dearest Tannu Baby,
-
-If I could wrap a feeling and place it gently in your hands, it would be the warmth I feel whenever you cross my mind. You make ordinary moments feel softer and the world a little brighter. Sometimes I wish you could borrow my eyes for a moment, just so you could see how special you are to me.
-
-I hope you always remember that you don't have to be perfect, have all the answers, or smile every second to be precious to me. You are wonderful as you are — on your happiest days and on the days when everything feels a bit too much.
-
-If this page could do one thing, I hope it makes you smile and reminds you that somewhere in this big world, someone is cheering for you, thinking of you, and wishing you all the gentleness and happiness you deserve.
-
-So here's a tiny promise: I'll keep finding little ways to remind you that you matter. Not only when the day is beautiful, but also when it feels long, quiet, or heavy. You never need a special reason to deserve care.
-
-You're my favourite little plot twist, my soft place to land, and my Tannu Baby. 🩵
-
-<div class="signature">Yours, with love ♡</div></div>
-  </section>
-
-  <section class="panel final-card route-page" data-route-page="final" id="final-surprise">
-    <div class="route-heading"><span class="route-icon">✨🧸💗</span><div class="eyebrow">the most special page</div></div>
-    <div class="eyebrow">one last thing…</div>
-    <div class="final-heart">💗</div>
-    <h2>One last thing, Babu… 💗</h2>
-    <p class="muted">No photo could capture this feeling. So I made you a little moment instead.</p>
-    <button class="pill" onclick="openSecret()">Tap for one last surprise ✨</button>
-    <div class="secret" id="secret" aria-live="polite">
-      <div style="font-size:2.6rem">💐🧸🩵</div>
-      <strong>Babu, tum meri jaan ho. ❤️ I love you so much. Tumhari smile meri favourite hai, aur tumhare saath bitaye hue chhote-chhote moments mere liye bahut special hain. Tum meri life ko aur meaningful, beautiful aur happy bana deti ho. I feel so lucky to have you in my world. Kaash abhi tumhe ek warm sa hug de pata. 🫂💗</strong><br>
-      If I could choose one little thing for you today, it would be this: may you feel loved in the quiet moments, laugh until your cheeks hurt, and never forget how much light you bring into the world.<br><br>
-      <span style="color:#397fae;font-weight:800">No special occasion needed. Your existence is already a reason to celebrate. And if you ever forget how lovely you are, come back here and let these words remind you again. 💗</span>
-    </div>
-  </section>
-  <div class="footer">Made with a whole lot of love, just for Tannu Baby 🩵<br>✧ every button opens a new little love page ✧</div>
+With all my love,
+Your person 💗</div><div class="btnrow"><button class="btn primary" onclick="go('gifts')">Choose another gift 🎁</button><button class="btn secondary" onclick="go('memories')">See our memories 📸</button></div></section>
+<section class="card hide" id="memories"><div class="eyebrow">little moments, big feelings</div><h2>Our little memories 📸</h2><p>Every picture holds a moment worth keeping. Tap any photo to see it bigger. 💙</p><div class="photo-grid">
+<figure><img src="assets/IMG_20260424_102609.webp" alt="A special memory with Tannu Baby" loading="lazy" decoding="async" width="900" height="1200"><figcaption>A little moment to remember 💗</figcaption></figure>
+<figure><img src="assets/IMG_20260424_102611.webp" alt="A happy memory with Tannu Baby" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Your smile, my favourite ✨</figcaption></figure>
+<figure><img src="assets/IMG_20260521_134502.webp" alt="A photo memory together" loading="lazy" decoding="async" width="900" height="1200"><figcaption>One for the heart 🩵</figcaption></figure>
+<figure><img src="assets/IMG_20260521_134717.webp" alt="A sweet shared memory" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Little things, lots of love 🌷</figcaption></figure>
+<figure><img src="assets/IMG_20260524_175811.webp" alt="A precious moment" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Saved with love 💌</figcaption></figure>
+<figure><img src="assets/IMG_20260710_152748.webp" alt="A favourite memory" loading="lazy" decoding="async" width="900" height="1200"><figcaption>My kind of happiness 🥹</figcaption></figure>
+<figure><img src="assets/IMG_20260710_153538.webp" alt="A memory to keep" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Us, in a little moment 💞</figcaption></figure>
+<figure><img src="assets/IMG_20260710_153543.webp" alt="Another sweet photo memory" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Something I'll always cherish 🌸</figcaption></figure>
+<figure><img src="assets/IMG_20260825_142514.webp" alt="A special day captured" loading="lazy" decoding="async" width="900" height="1200"><figcaption>A day worth remembering 🩵</figcaption></figure>
+<figure><img src="assets/IMG_20260912_143858.webp" alt="A happy photo memory" loading="lazy" decoding="async" width="900" height="1200"><figcaption>One more reason to smile 💗</figcaption></figure>
+<figure><img src="assets/IMG_20260912_144231.webp" alt="A final photo memory" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Always a special memory ✨</figcaption></figure>
+</div><div class="btnrow"><button class="btn primary" onclick="go('final')">One last surprise 💙</button><button class="btn secondary" onclick="go('gifts')">Back to gifts</button></div></section>
+<section class="card final hide" id="final"><div class="eyebrow">one last thing, birthday girl</div><div class="flowers">💙🧸💙</div><h1>You're my favourite person.</h1><p>Happy Birthday, Tannu Baby! I hope this little surprise made you smile even a tiny bit. You deserve all the love, all the flowers, all the cake, and all the beautiful things life can bring. 🎂💐</p><h2>Always yours, with love 🩵</h2><div class="btnrow"><button class="btn primary" onclick="celebrate()">Celebrate again! 🎉</button><button class="btn secondary" onclick="go('welcome')">Start from the beginning ↻</button></div></section>
+<div class="footer">made with 💙, a little imagination, and lots of love — for Tannu Baby</div>
 </main>
-<button class="love-fab" type="button" onclick="showRoute('final')">💗 Little love</button>
-<div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" onclick="if(event.target===this)closePhoto()"><button class="lightbox-close" type="button" onclick="closePhoto()">✕ Close</button><img id="lightbox-image" alt="" decoding="async"><div class="lightbox-caption" id="lightbox-caption"></div></div>
+<div id="modal" role="dialog" aria-modal="true" aria-label="Your surprise" onclick="if(event.target===this)closeModal()"><div class="modal-box"><div id="modalContent"></div><div class="btnrow"><button class="btn primary" onclick="closeModal()">Awww 💙</button></div></div></div>
 <script>
-const progressBar=document.getElementById('love-progress');
-window.addEventListener('scroll',()=>{
-  const max=document.documentElement.scrollHeight-window.innerHeight;
-  progressBar.style.width=(max>0?(window.scrollY/max)*100:0)+'%';
-},{passive:true});
-document.querySelectorAll('.photo-grid img').forEach(img=>img.addEventListener('click',()=>{
-  const box=document.getElementById('photo-lightbox');
-  document.getElementById('lightbox-image').src=img.src;
-  document.getElementById('lightbox-image').alt=img.alt;
-  document.getElementById('lightbox-caption').textContent=img.closest('figure').querySelector('figcaption')?.textContent||'A little memory 💗';
-  box.classList.add('open');
-  document.body.style.overflow='hidden';
-}));
-function closePhoto(){
-  document.getElementById('photo-lightbox').classList.remove('open');
-  document.body.style.overflow='';
-}
-document.addEventListener('keydown',event=>{if(event.key==='Escape')closePhoto()});
-const initialRoute=location.hash.startsWith('#/')?location.hash.slice(2):'home';
-if(location.hash.startsWith('#/')){
-  document.body.classList.remove('landing-mode');
-  showRoute(initialRoute,false);
-}else{
-  document.body.classList.add('landing-mode');
-}
-const floaties = document.getElementById('floaties');
-const symbols = ['♡','✦','🩵','☁️','💗'];
-for(let i=0;i<18;i++){
-  const el=document.createElement('span');
-  el.className='floaty'; el.textContent=symbols[i%symbols.length];
-  el.style.left=(Math.random()*100)+'%';
-  el.style.animationDuration=(9+Math.random()*13)+'s';
-  el.style.animationDelay=(-Math.random()*18)+'s';
-  el.style.fontSize=(16+Math.random()*18)+'px';
-  floaties.appendChild(el);
-}
-const giftMessages = [
-  'Please never forget this, Tannu Baby: you deserve kindness, patience, joy, and a love that makes you feel safe being exactly who you are. You do not have to earn your place in someone’s heart. 🩵',
-  'Imagine the biggest, coziest hug — the kind that says “breathe, I’m here, and you don’t have to handle every little thing all at once.” Sending you one right now. 🫂💗',
-  'My wish for you: peaceful mornings, exciting little adventures, people who cherish you, dreams that come closer every day, and a hundred unexpected reasons to smile. 🌷✨'
-];
-// Route pages use their own entrance animation; avoid hiding inactive pages.
-function loveRain(count=24){
-  const hearts=['💗','🩵','💖','💕','💘','🌸','✨','🥹'];
-  for(let i=0;i<count;i++){
-    const el=document.createElement('span');
-    el.className='love-rain';
-    el.textContent=hearts[Math.floor(Math.random()*hearts.length)];
-    el.style.setProperty('--left',Math.random()*100+'vw');
-    el.style.setProperty('--size',(16+Math.random()*22)+'px');
-    el.style.setProperty('--duration',(2.4+Math.random()*2.8)+'s');
-    el.style.setProperty('--drift',((Math.random()-.5)*180)+'px');
-    el.style.animationDelay=(Math.random()*.65)+'s';
-    document.body.appendChild(el);
-    setTimeout(()=>el.remove(),5600);
-  }
-}
-const routeTitles={home:'Home',memory:'Our memory',photos:'Our photos',gifts:'Little gifts',feelings:'My words',letter:'Love letter',final:'Final surprise'};
-document.querySelectorAll('[data-route-page]:not([data-route-page="home"])').forEach(page=>{
-  if(page.querySelector('.route-back')) return;
-  const back=document.createElement('div');
-  back.className='route-back';
-  const button=document.createElement('button');
-  button.className='pill';
-  button.type='button';
-  button.textContent='💗 Back to Surprise Home';
-  button.addEventListener('click',()=>showRoute('home'));
-  back.appendChild(button);
-  page.appendChild(back);
-});
-function enterLoveWorld(){
-  document.body.classList.remove('landing-mode');
-  showRoute('home',false);
-  loveRain(42);
-  burst(24);
-}
-function showRoute(route,animate=true){
-  if(!routeTitles[route]) route='home';
-  document.body.classList.remove('landing-mode');
-  document.querySelectorAll('[data-route-page]').forEach(page=>{
-    const active=page.dataset.routePage===route;
-    page.classList.toggle('route-active',active);
-    page.setAttribute('aria-hidden',String(!active));
-  });
-  document.querySelectorAll('[data-route]').forEach(link=>{
-    if(link.dataset.route===route) link.setAttribute('aria-current','page');
-    else link.removeAttribute('aria-current');
-  });
-  if(location.hash!=='#/'+route) history.replaceState(null,'','#/'+route);
-  window.scrollTo({top:0,behavior:animate?'smooth':'auto'});
-  if(animate){loveRain(route==='final'?48:28);burst(route==='final'?28:12);}
-}
-document.querySelectorAll('[data-route]').forEach(link=>link.addEventListener('click',event=>{
-  event.preventDefault();
-  showRoute(link.dataset.route);
-}));
-window.addEventListener('hashchange',()=>showRoute(location.hash.replace(/^#\//,''),true));
-function revealGift(index){
-  const box=document.getElementById('reveal');
-  box.innerHTML=giftMessages[index];
-  box.classList.add('show');
-  burst(8);
-}
-function openSecret(){
-  document.getElementById('secret').classList.add('show');
-  burst(34);
-}
-function burst(count){
-  const emojis=['💗','🩵','✨','♡','🌸','💫'];
-  for(let i=0;i<count;i++){
-    const el=document.createElement('span');
-    el.className='sprinkle'; el.textContent=emojis[Math.floor(Math.random()*emojis.length)];
-    el.style.left=(35+Math.random()*30)+'vw'; el.style.top=(35+Math.random()*25)+'vh';
-    el.style.setProperty('--x',((Math.random()-.5)*window.innerWidth*.9)+'px');
-    el.style.setProperty('--y',(-40-Math.random()*window.innerHeight*.6)+'px');
-    document.body.appendChild(el); setTimeout(()=>el.remove(),1800);
-  }
-}
+const sections=['welcome','birthday','question','gifts','flowers','letter','memories','final'];
+function go(id){sections.forEach(s=>document.getElementById(s).classList.toggle('hide',s!==id));window.scrollTo({top:0,behavior:'smooth'});if(id==='gifts')confetti(18)}
+function blowCandles(){document.getElementById('candles').innerHTML='✨ ✨ ✨';document.getElementById('wish').textContent='Wish sent to the universe! May it come true, Tannu Baby 💙';document.getElementById('blow').textContent='Wish made! 💫';document.getElementById('blow').disabled=true;confetti(35)}
+function moveNo(){const b=document.getElementById('noBtn');const area=b.parentElement;const maxX=Math.max(0,area.clientWidth-b.offsetWidth);b.style.transform='translate('+Math.round((Math.random()-.5)*Math.min(130,maxX+80))+'px,'+Math.round((Math.random()-.5)*45)+'px)';document.getElementById('noHint').textContent='Hehe, try again… or just say YES 😜'}
+function acceptGifts(){document.getElementById('bear').textContent='🥹💙';document.getElementById('questionText').textContent='I knew you would! You deserve every little bit of happiness. 💗';confetti(32);setTimeout(()=>go('gifts'),650)}
+function openGift(which){if(which==='flowers'){go('flowers');return}if(which==='letter'){go('letter');return}go('memories')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+function celebrate(){confetti(65);document.querySelector('.hero-bow').textContent='🎉🎀🎉';setTimeout(()=>document.querySelector('.hero-bow').textContent='🎀',2200)}
+function confetti(count=24){const icons=['💙','💗','✨','🎉','🩵','🌸'];for(let i=0;i<count;i++){const e=document.createElement('span');e.className='confetti';e.textContent=icons[Math.floor(Math.random()*icons.length)];e.style.left=Math.random()*100+'vw';e.style.animationDelay=Math.random()*.8+'s';e.style.animationDuration=(2.5+Math.random()*2)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),5200)}}
+document.querySelectorAll('.photo-grid img').forEach(img=>img.addEventListener('click',()=>{document.getElementById('modalContent').innerHTML='<img class="lightbox-img" src="'+img.src+'" alt="'+img.alt+'"><p>'+img.alt+'</p>';document.getElementById('modal').classList.add('open')}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 </script>
 </body>
 </html>
