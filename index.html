@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#eaf6ff">
-<meta name="description" content="A birthday surprise made with love for Tannu Baby 💙">
+<meta name="description" content="A little romantic surprise made with love for Tannu Baby 💙">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
-<title>Happy Birthday Tannu Baby 💙🎂</title>
+<title>A Little Surprise for Tannu Baby 💙</title>
 <style>
 :root{--blue:#2479bd;--sky:#dff1ff;--ink:#183d61;--pink:#ffb9d2;--paper:#fffdf8}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;background-color:#f7fbff;background-image:radial-gradient(#8fc5ed 2px,transparent 2px);background-size:20px 20px;overflow-x:hidden}
@@ -30,15 +30,15 @@ h1,h2,h3,p{text-align:center}h1{font-family:"Playfair Display",Georgia,serif;fon
 </head>
 <body>
 <main class="shell">
-<div class="top-note">girl, here's the perfect birthday surprise for the girl who makes my world special 💙🎂</div>
-<section class="card hero" id="welcome"><div class="hero-inner"><div class="hero-bow">🎀</div><div class="eyebrow">a little surprise, made just for you</div><h1>Hey Tannu Baby! 💙</h1><p class="subtitle">I made a tiny world of blue skies, sweet wishes and all the love I have for you. Ready to open your birthday surprise?</p><div class="btnrow"><button class="btn primary" onclick="go('birthday')">Open your surprise ✨</button></div></div></section>
-<section class="card hide" id="birthday"><div class="bunting">💙 ✦ 🎉 ✦ 💙</div><div class="eyebrow">today is all about you</div><h1>Happy Birthday!</h1><h2>Tannu Baby 🩵</h2><div class="cake-wrap"><div class="candles" id="candles"><span class="flames">🕯️ 🕯️ 🕯️</span></div><div class="cake">🎂</div><p class="wish" id="wish">Make a wish, baby! Close your eyes for a second ✨</p><button class="btn primary" id="blow" onclick="blowCandles()">Blow the candles! 🌬️</button></div><p>May your smile stay bright, your heart stay happy, and every little dream find its way to you.</p><div class="btnrow"><button class="btn secondary" onclick="go('question')">Continue your surprise 💌</button></div></section>
-<section class="card hide" id="question"><div class="eyebrow">one tiny question</div><h2>Accept your gifts? 🎁</h2><div class="gift-question"><div class="bear" id="bear" aria-label="cute birthday kitten">🐱💙</div><p id="questionText">I picked these with lots and lots of love. Will you accept them, Tannu Baby?</p><div class="gift-choices"><button class="btn primary" onclick="acceptGifts()">YES, of course! 💙</button><button class="btn no-btn" id="noBtn" onmouseenter="moveNo()" onclick="moveNo()">No 🙈</button></div><p class="tiny" id="noHint">Psst… the “No” button is a little shy 😜</p></div></section>
+<div class="top-note">a little surprise for the girl who makes my world special 💙</div>
+<section class="card hero" id="welcome"><div class="hero-inner"><div class="hero-bow">🎀</div><div class="eyebrow">a little surprise, made just for you</div><h1>Hey Tannu Baby! 💙</h1><p class="subtitle">I made a tiny world of blue skies, little surprises and all the love I have for you. Ready to open it?</p><div class="btnrow"><button class="btn primary" onclick="go('birthday')">Open your surprise ✨</button></div></div></section>
+<section class="card hide" id="birthday"><div class="bunting">💙 ✦ 🎉 ✦ 💙</div><div class="eyebrow">a little moment just for you</div><h1>You Make Me Smile!</h1><h2>Tannu Baby 🩵</h2><div class="cake-wrap"><div class="candles" id="candles"><span class="flames">🕯️ 🕯️ 🕯️</span></div><div class="cake">🎂</div><p class="wish" id="wish">Close your eyes for a second and make a little wish ✨</p><button class="btn primary" id="blow" onclick="blowCandles()">Send a little love ✨</button></div><p>May your smile stay bright, your heart stay happy, and may you always feel how special you are to me.</p><div class="btnrow"><button class="btn secondary" onclick="go('question')">Continue your surprise 💌</button></div></section>
+<section class="card hide" id="question"><div class="eyebrow">one tiny question</div><h2>Will you accept my gifts? 🎁</h2><div class="gift-question"><div class="bear" id="bear" aria-label="cute birthday kitten">🐱💙</div><p id="questionText">I picked these with lots and lots of love. Will you accept them, Tannu Baby?</p><div class="gift-choices"><button class="btn primary" onclick="acceptGifts()">YES, of course! 💙</button><button class="btn no-btn" id="noBtn" onmouseenter="moveNo()" onclick="moveNo()">No 🙈</button></div><p class="tiny" id="noHint">Psst… the “No” button is a little shy 😜</p></div></section>
 <section class="card hide" id="gifts"><div class="eyebrow">picked with all my heart</div><h2>Yay! Choose your gift 🎁</h2><p>Each little gift has a piece of my heart inside.</p><div class="gift-grid"><button class="gift" onclick="openGift('flowers')"><span>💐</span><div><strong>Some flowers for you</strong><small>A bouquet that never fades 🌷</small></div></button><button class="gift" onclick="openGift('letter')"><span>💌</span><div><strong>A little love letter</strong><small>Words from my heart to yours</small></div></button><button class="gift" onclick="openGift('memories')"><span>🎁</span><div><strong>Our little memories</strong><small>Moments I want to keep forever</small></div></button></div></section>
 <section class="card hide" id="flowers"><div class="eyebrow">just for you</div><h2>Some flowers for you! 💐</h2><div class="flowers">🐱💐</div><p>For the girl who makes ordinary days feel beautiful. If I could, I'd bring you flowers every day just to see that smile. 🌸</p><div class="btnrow"><button class="btn primary" onclick="go('gifts')">Choose another gift</button><button class="btn secondary" onclick="go('letter')">Read your letter 💌</button></div></section>
 <section class="card hide" id="letter"><div class="eyebrow">from my heart to yours</div><h2>A little love letter 💌</h2><div class="letter">My dearest Tannu Baby, 💙
 
-Happy Birthday to the sweetest person in my world. I hope today reminds you how loved, precious and special you are to me.
+You are one of the sweetest parts of my world. I hope this little surprise reminds you how loved, precious and special you are to me.
 
 Your smile can make my whole day better. Even the smallest moments with you become memories I want to hold close. I may not always find the perfect words, but one thing is always true: you mean so much to me.
 
@@ -46,7 +46,7 @@ I wish you happiness that lasts, dreams that come true, peaceful days, and a tho
 
 Today, tomorrow, and in all the little moments in between — I'm cheering for you, always.
 
-Happy Birthday, my Tannu Baby. 🩵🎂
+You mean so much to me, my Tannu Baby. 🩵
 
 With all my love,
 Your person 💗</div><div class="btnrow"><button class="btn primary" onclick="go('gifts')">Choose another gift 🎁</button><button class="btn secondary" onclick="go('memories')">See our memories 📸</button></div></section>
@@ -63,14 +63,14 @@ Your person 💗</div><div class="btnrow"><button class="btn primary" onclick="g
 <figure><img src="assets/IMG_20260912_143858.webp" alt="A happy photo memory" loading="lazy" decoding="async" width="900" height="1200"><figcaption>One more reason to smile 💗</figcaption></figure>
 <figure><img src="assets/IMG_20260912_144231.webp" alt="A final photo memory" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Always a special memory ✨</figcaption></figure>
 </div><div class="btnrow"><button class="btn primary" onclick="go('final')">One last surprise 💙</button><button class="btn secondary" onclick="go('gifts')">Back to gifts</button></div></section>
-<section class="card final hide" id="final"><div class="eyebrow">one last thing, birthday girl</div><div class="flowers">💙🧸💙</div><h1>You're my favourite person.</h1><p>Happy Birthday, Tannu Baby! I hope this little surprise made you smile even a tiny bit. You deserve all the love, all the flowers, all the cake, and all the beautiful things life can bring. 🎂💐</p><h2>Always yours, with love 🩵</h2><div class="btnrow"><button class="btn primary" onclick="celebrate()">Celebrate again! 🎉</button><button class="btn secondary" onclick="go('welcome')">Start from the beginning ↻</button></div></section>
+<section class="card final hide" id="final"><div class="eyebrow">one last thing, my favourite girl</div><div class="flowers">💙🧸💙</div><h1>You're my favourite person.</h1><p>I hope this little surprise made you smile even a tiny bit, Tannu Baby. You deserve all the love, all the flowers, and all the beautiful things life can bring. 💐</p><h2>Always yours, with love 🩵</h2><div class="btnrow"><button class="btn primary" onclick="celebrate()">Celebrate again! 🎉</button><button class="btn secondary" onclick="go('welcome')">Start from the beginning ↻</button></div></section>
 <div class="footer">made with 💙, a little imagination, and lots of love — for Tannu Baby</div>
 </main>
 <div id="modal" role="dialog" aria-modal="true" aria-label="Your surprise" onclick="if(event.target===this)closeModal()"><div class="modal-box"><div id="modalContent"></div><div class="btnrow"><button class="btn primary" onclick="closeModal()">Awww 💙</button></div></div></div>
 <script>
 const sections=['welcome','birthday','question','gifts','flowers','letter','memories','final'];
 function go(id){sections.forEach(s=>document.getElementById(s).classList.toggle('hide',s!==id));window.scrollTo({top:0,behavior:'smooth'});if(id==='gifts')confetti(18)}
-function blowCandles(){document.getElementById('candles').innerHTML='✨ ✨ ✨';document.getElementById('wish').textContent='Wish sent to the universe! May it come true, Tannu Baby 💙';document.getElementById('blow').textContent='Wish made! 💫';document.getElementById('blow').disabled=true;confetti(35)}
+function blowCandles(){document.getElementById('candles').innerHTML='💗 ✨ 💗';document.getElementById('wish').textContent='A little love sent just for you, Tannu Baby 💙';document.getElementById('blow').textContent='Love sent! 💫';document.getElementById('blow').disabled=true;confetti(35)}
 function moveNo(){const b=document.getElementById('noBtn');const area=b.parentElement;const maxX=Math.max(0,area.clientWidth-b.offsetWidth);b.style.transform='translate('+Math.round((Math.random()-.5)*Math.min(130,maxX+80))+'px,'+Math.round((Math.random()-.5)*45)+'px)';document.getElementById('noHint').textContent='Hehe, try again… or just say YES 😜'}
 function acceptGifts(){document.getElementById('bear').textContent='😻💙';document.getElementById('questionText').textContent='I knew you would! You deserve every little bit of happiness. 💗';confetti(32);setTimeout(()=>go('gifts'),650)}
 function openGift(which){if(which==='flowers'){go('flowers');return}if(which==='letter'){go('letter');return}go('memories')}
