@@ -143,10 +143,40 @@
   .photo-grid figure:hover img{transform:scale(1.035)}
   .photo-grid figcaption{padding:11px 12px;color:#55748a;font-size:.88rem;line-height:1.45}
   @media(max-width:520px){.photo-grid{gap:9px}.photo-grid img{height:170px}.photo-grid figcaption{padding:9px;font-size:.78rem}}
+  /* Premium romantic experience */
+  body{background:radial-gradient(ellipse at 8% 5%,#fff 0,transparent 32%),radial-gradient(ellipse at 92% 28%,#fbe7f2 0,transparent 30%),linear-gradient(160deg,#f9fdff 0%,#e5f5ff 45%,#f4efff 100%);background-attachment:fixed}
+  .wrap{width:min(1000px,100%);padding-top:24px}
+  .hero,.panel,.welcome-card{box-shadow:0 22px 70px #6daedb20,0 2px 10px #ffffffc9;backdrop-filter:blur(14px)}
+  .quick-nav{border:1px solid #ffffffb8;border-radius:999px;padding:12px;margin:0 0 12px;box-shadow:0 12px 28px #8abfe51c}
+  .quick-nav a{transition:transform .22s,background .22s,box-shadow .22s}
+  .quick-nav a:hover{transform:translateY(-2px);background:#f4fbff}
+  .pill{transition:transform .22s,filter .22s,box-shadow .22s}
+  .pill:hover{transform:translateY(-2px);filter:saturate(1.08);box-shadow:0 10px 24px #8ccdf255,0 5px 0 #68b3e1}
+  .panel{border-color:#ffffffeb}
+  .route-heading{padding:8px 0 10px}
+  .route-heading .route-icon{filter:drop-shadow(0 6px 10px #8ccdf255)}
+  .photo-gallery{margin-top:0;padding-top:25px;border-top:0}
+  .photo-grid figure{position:relative;transition:transform .25s,box-shadow .25s;border-color:#fff;box-shadow:0 10px 28px #497ea31a}
+  .photo-grid figure:hover{transform:translateY(-4px);box-shadow:0 18px 32px #497ea329}
+  .photo-grid img{height:clamp(180px,30vw,320px);cursor:zoom-in}
+  .photo-grid figcaption{background:linear-gradient(180deg,#fff,#f7fbff);font-weight:700}
+  .photo-grid figure::after{content:"↗";position:absolute;right:10px;top:10px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:#ffffffd9;color:#397fae;font-weight:900;pointer-events:none}
+  .love-progress{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,#8ccdf2,#f2a5c5,#c6b7ff);z-index:50;box-shadow:0 0 12px #e78eaf88}
+  .love-fab{position:fixed;right:16px;bottom:16px;z-index:12;border:1px solid #fff;background:#ffffffd9;color:#397fae;border-radius:999px;padding:12px 15px;font-weight:900;box-shadow:0 8px 28px #397fae26;backdrop-filter:blur(10px);transition:transform .2s}
+  .love-fab:hover{transform:translateY(-3px) rotate(-2deg)}
+  .photo-lightbox{position:fixed;inset:0;z-index:100;background:#102536e8;backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:20px}
+  .photo-lightbox.open{display:flex;animation:pop .25s ease}
+  .photo-lightbox img{max-width:min(100%,1000px);max-height:82vh;object-fit:contain;border-radius:18px;box-shadow:0 24px 80px #0008}
+  .lightbox-close{position:absolute;right:18px;top:18px;border:1px solid #ffffff55;background:#ffffff1c;color:white;border-radius:999px;padding:11px 15px;font-size:1rem}
+  .lightbox-caption{position:absolute;bottom:18px;left:16px;right:16px;text-align:center;color:#fff;font-weight:700}
+  .welcome-card{border-color:#fff}
+  .footer{line-height:1.9}
+  @media(max-width:520px){.wrap{padding-top:12px}.quick-nav{border-radius:18px}.love-fab{right:10px;bottom:10px;padding:10px 12px}.photo-lightbox{padding:12px}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body class="landing-mode">
+<div class="love-progress" id="love-progress" aria-hidden="true"></div>
 <div class="floaties" id="floaties" aria-hidden="true"></div>
 <div class="welcome-screen" id="welcome-screen">
   <div class="welcome-card">
@@ -171,6 +201,7 @@
   <nav class="quick-nav" aria-label="Surprise sections">
     <a href="#/home" data-route="home" aria-current="page">🏠 Home</a>
     <a href="#/memory" data-route="memory">🍝 Our memory</a>
+    <a href="#/photos" data-route="photos">📸 Our photos</a>
     <a href="#/gifts" data-route="gifts">🎁 Little gifts</a>
     <a href="#/feelings" data-route="feelings">💌 My words</a>
     <a href="#/letter" data-route="letter">💗 Love letter</a>
@@ -194,7 +225,7 @@ Until then, I'm keeping our pasta-and-pizza memory safe in my heart. Maybe next 
 <div class="signature">Your hug-waiting person ♡</div></div>
   </section>
 
-    <div class="photo-gallery">
+    <section class="panel route-page photo-gallery" data-route-page="photos" id="photo-memories">
       <div class="eyebrow">little moments, big feelings</div>
       <h2>Our photo memories 📸💗</h2>
       <p class="muted">Some moments deserve to be kept close. Every picture is a little piece of our story. 🩵</p>
@@ -211,7 +242,7 @@ Until then, I'm keeping our pasta-and-pizza memory safe in my heart. Maybe next 
         <figure><img src="assets/IMG_20260912_143858.jpg" alt="A happy photo memory" loading="lazy"><figcaption>One more reason to smile 💗</figcaption></figure>
         <figure><img src="assets/IMG_20260912_144231.jpg" alt="A final photo memory" loading="lazy"><figcaption>Always a special memory ✨</figcaption></figure>
       </div>
-    </div>
+    </section>
   <section class="panel route-page" data-route-page="feelings" id="feelings">
     <div class="route-heading"><span class="route-icon">💌🩵</span><div class="eyebrow">a page full of feelings</div></div>
     <div class="eyebrow">read this with your heart</div>
@@ -278,7 +309,27 @@ You're my favourite little plot twist, my soft place to land, and my Tannu Baby.
   </section>
   <div class="footer">Made with a whole lot of love, just for Tannu Baby 🩵<br>✧ every button opens a new little love page ✧</div>
 </main>
+<button class="love-fab" type="button" onclick="showRoute('final')">💗 Little love</button>
+<div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" onclick="if(event.target===this)closePhoto()"><button class="lightbox-close" type="button" onclick="closePhoto()">✕ Close</button><img id="lightbox-image" alt=""><div class="lightbox-caption" id="lightbox-caption"></div></div>
 <script>
+const progressBar=document.getElementById('love-progress');
+window.addEventListener('scroll',()=>{
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  progressBar.style.width=(max>0?(window.scrollY/max)*100:0)+'%';
+},{passive:true});
+document.querySelectorAll('.photo-grid img').forEach(img=>img.addEventListener('click',()=>{
+  const box=document.getElementById('photo-lightbox');
+  document.getElementById('lightbox-image').src=img.src;
+  document.getElementById('lightbox-image').alt=img.alt;
+  document.getElementById('lightbox-caption').textContent=img.closest('figure').querySelector('figcaption')?.textContent||'A little memory 💗';
+  box.classList.add('open');
+  document.body.style.overflow='hidden';
+}));
+function closePhoto(){
+  document.getElementById('photo-lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',event=>{if(event.key==='Escape')closePhoto()});
 const initialRoute=location.hash.startsWith('#/')?location.hash.slice(2):'home';
 if(location.hash.startsWith('#/')){
   document.body.classList.remove('landing-mode');
@@ -318,7 +369,7 @@ function loveRain(count=24){
     setTimeout(()=>el.remove(),5600);
   }
 }
-const routeTitles={home:'Home',memory:'Our memory',gifts:'Little gifts',feelings:'My words',letter:'Love letter',final:'Final surprise'};
+const routeTitles={home:'Home',memory:'Our memory',photos:'Our photos',gifts:'Little gifts',feelings:'My words',letter:'Love letter',final:'Final surprise'};
 document.querySelectorAll('[data-route-page]:not([data-route-page="home"])').forEach(page=>{
   if(page.querySelector('.route-back')) return;
   const back=document.createElement('div');
