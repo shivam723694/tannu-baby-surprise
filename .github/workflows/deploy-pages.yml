@@ -23,6 +23,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Convert gallery photos to optimized WebP
+        run: |
+          python -m pip install --quiet Pillow
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+          for path in Path("assets").glob("*.jpg"):
+              with Image.open(path) as image:
+                  image = ImageOps.exif_transpose(image).convert("RGB")
+                  image.save(path.with_suffix(".webp"), "WEBP", quality=78, method=6)
+          print("WebP conversion complete")
+          PY
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload website
